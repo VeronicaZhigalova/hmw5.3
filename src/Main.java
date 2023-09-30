@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+mport java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Main main = new Main();
         int[] array = {3, 2, 1, 0};
-        System.out.println(main.getArrays(array));
+        System.out.println(main.getNumbers(array));
 
         List<Integer> strings = new ArrayList<>();
         strings.add(2);
@@ -15,7 +15,7 @@ public class Main {
         strings.add(0);
         System.out.println(main.getAverageOfAllNumbers(strings));
 
-        main.multiPlication(10);
+        main.multiplicationTable(10);
 
         main.countFromOneToHundred();
 
@@ -35,7 +35,7 @@ public class Main {
     }
 
 
-    public int getArrays(int[] a) {
+    public int getNumbers(int[] a) {
         int sum = 0;
         for (int num : a) {
             sum = sum + num;
@@ -52,8 +52,7 @@ public class Main {
         return sum / b.size();
     }
 
-    public void multiPlication(int l) {
-        int[] a = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    public void multiplicationTable(int l) {
         for (int i = 0; i <= 10; i++) {
             int result = i * l;
             System.out.println(l + " * " + i + " = " + result);
@@ -63,15 +62,13 @@ public class Main {
 
     public void countFromOneToHundred() {
         for (int i = 1; i <= 100; i++) {
-            if ((i % 3 == 0) && (i % 5 == 0))
+            if ((i % 3 == 0) && (i % 5 == 0)) {
                 System.out.println("FizzBuzz");
-            else if (i % 3 == 0)
+            } else if (i % 3 == 0) {
                 System.out.println("Fizz");
-            else if (i % 5 == 0)
+            } else if (i % 5 == 0) {
                 System.out.println("Buzz");
-            else System.out.println(i);
-
-
+            } else System.out.println(i);
         }
     }
 
@@ -93,4 +90,5 @@ public class Main {
         }
     }
 }
+
 
